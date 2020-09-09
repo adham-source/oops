@@ -210,7 +210,7 @@ header .form-content .search-content .btn-search {
     background: linear-gradient(180deg, var(--main-color), #5c4448);
 }
 
-.dropdown .btn-secondary {
+.menu-product .dropdown .btn {
     position: relative;
     font-size: .5rem;
     font-weight: 600;
@@ -218,9 +218,10 @@ header .form-content .search-content .btn-search {
     border-radius: 2rem;
     background: #444;
     border-color: #444;
+    color: #fff;
 }
 
-.dropdown .dropdown-toggle::after {
+.menu-product .dropdown .dropdown-toggle::after {
     position: absolute;
     top: 50%;
     left: .7rem;
@@ -233,7 +234,7 @@ header .form-content .search-content .btn-search {
 
 /*Start media query*/
 @media screen and (max-width: 991px) {
-    .dropdown .btn-secondary {
+    .menu-product .dropdown .btn {
         font-size: .9rem;
     }
 }
@@ -242,9 +243,11 @@ header .form-content .search-content .btn-search {
     .menu-product {
         padding-top: 6rem;
     }
+}
 
-    .dropdown .btn-secondary {
-        width: 17rem;
+@media screen and (max-width: 575px) {
+    .menu-product .dropdown .btn {
+        width: 75%;
     }
 }
 /*!-- End nav-product --*/
@@ -421,7 +424,8 @@ footer {
 
 .header .form-content .input-content,
 .header .form-content .select-content {
-    width: 90%
+   width: 95%;
+   padding: 0 .3rem
 }
 
 .header .form-content .form-content-top .select-content:nth-child(3) select {
@@ -466,6 +470,10 @@ footer {
 }
 /*Start media query*/
 @media screen and (max-width: 767px) {
+    .header .form-content{
+        align-items: initial !important;
+    }
+
     .header .form-content .form-content-top {
         grid-template-columns: repeat(1, 1fr);
     }
